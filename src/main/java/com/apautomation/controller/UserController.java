@@ -24,23 +24,23 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@PostMapping("/user")
+	@PostMapping("/employee")
 	Employee newUser(@RequestBody Employee newUser) {
 		return userRepository.save(newUser);
 	}
 	
-	@GetMapping("/users")
+	@GetMapping("/employees")
 	List<Employee> getAllUsers(){
 		return userRepository.findAll();
 	}
 	
-	@GetMapping("/user/{id}")
+	@GetMapping("/employee/{id}")
 	Employee getUserById(@PathVariable Long id) {
 		return userRepository.findById(id)
 				.orElseThrow(()->new UserNotFoundException(id));
 	}
 	
-	@PutMapping("/user/{id}")
+	@PutMapping("/employee/{id}")
 	Employee updateUser(@RequestBody Employee newUser, @PathVariable Long id) {
 		return userRepository.findById(id)
 				.map(user -> {
@@ -52,7 +52,7 @@ public class UserController {
 				}).orElseThrow(() -> new UserNotFoundException(id));
 	}
 	
-	@DeleteMapping("/user/{id}")
+	@DeleteMapping("/employee/{id}")
 	String deleteUser(@PathVariable Long id) {
 		if(!userRepository.existsById(id)) {
 			throw new UserNotFoundException(id);
