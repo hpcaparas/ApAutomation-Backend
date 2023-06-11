@@ -18,7 +18,7 @@ import com.apautomation.repository.UserRepository;
 
 
 @RestController
-@CrossOrigin("http://localhost:3000")
+//@CrossOrigin("http://localhost:3000")
 public class UserController {
 
 	@Autowired
