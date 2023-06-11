@@ -25,8 +25,8 @@ public class UserController {
 	private UserRepository userRepository;
 	
 	@PostMapping("/employee")
-	Employee newUser(@RequestBody Employee newUser) {
-		return userRepository.save(newUser);
+	Employee newEmp(@RequestBody Employee newEmp) {
+		return userRepository.save(newEmp);
 	}
 	
 	@GetMapping("/employees")
