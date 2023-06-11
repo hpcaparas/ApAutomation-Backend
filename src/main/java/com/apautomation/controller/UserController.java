@@ -18,7 +18,7 @@ import com.apautomation.repository.UserRepository;
 
 
 @RestController
-//@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://apautomation-backend.azurewebsites.net")
 public class UserController {
 
 	@Autowired
