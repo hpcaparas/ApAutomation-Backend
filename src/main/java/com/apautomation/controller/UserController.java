@@ -45,6 +45,7 @@ public class UserController {
 	Employee updateUser(@RequestBody Employee newUser, @PathVariable Long id) {
 		return userRepository.findById(id)
 				.map(user -> {
+					user.setEmail(null);
 					user.setUsername(newUser.getUsername());
 					user.setName(newUser.getName());
 					user.setEmail(newUser.getEmail());
