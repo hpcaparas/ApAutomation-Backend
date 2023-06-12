@@ -16,7 +16,7 @@ import com.apautomation.exception.UserNotFoundException;
 import com.apautomation.model.Employee;
 import com.apautomation.repository.UserRepository;
 
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 //@CrossOrigin("https://apautomation-backend.azurewebsites.net")
 //@CrossOrigin("http://localhost:3000")
