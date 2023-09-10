@@ -29,10 +29,10 @@ import com.apautomation.responses.MessageResponse;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+//@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/admin")
-//@CrossOrigin("https://apautomation-backend.azurewebsites.net")
+@CrossOrigin("https://apautomation-backend.azurewebsites.net")
 //@CrossOrigin("http://localhost:3000")
 public class UserController {
 
