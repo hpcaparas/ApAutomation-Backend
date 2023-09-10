@@ -36,8 +36,8 @@ import com.apautomation.utils.ImageUtils;
 
 import jakarta.servlet.http.HttpServletResponse;
 
-//@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin("https://apautomation-backend.azurewebsites.net")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin("https://apautomation-backend.azurewebsites.net")
 @RestController
 @RequestMapping("/api/transaction")
 public class ReimbController {

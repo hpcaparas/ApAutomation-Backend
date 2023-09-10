@@ -19,8 +19,8 @@ import com.apautomation.modules.employee.model.Department;
 import com.apautomation.modules.employee.repository.DeptRepository;
 import com.apautomation.responses.MessageResponse;
 
-//@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin("https://apautomation-backend.azurewebsites.net")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin("https://apautomation-backend.azurewebsites.net")
 @RestController
 @RequestMapping("/api/common")
 public class DeptController {

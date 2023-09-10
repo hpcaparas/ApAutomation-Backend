@@ -32,7 +32,7 @@ import jakarta.validation.Valid;
 //@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/admin")
-@CrossOrigin("https://apautomation-backend.azurewebsites.net")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin("http://localhost:3000")
 public class UserController {
 
