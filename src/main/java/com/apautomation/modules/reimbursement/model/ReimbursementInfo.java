@@ -18,7 +18,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
+//@Builder
 @Entity
 public class ReimbursementInfo {
 	
