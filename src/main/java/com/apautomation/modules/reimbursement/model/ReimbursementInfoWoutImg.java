@@ -18,71 +18,26 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
-@Entity
-public class ReimbursementInfo {
-	
-	@Id
-	@GeneratedValue
+public class ReimbursementInfoWoutImg {
+
 	private Long id;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String empName;
-	
-	//@Column(columnDefinition="varchar(20) default ''")
 	private String username;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String store;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String type;
-	
 	private double priceWTax;
-	
 	private double tax;
-	
-	//@Column(columnDefinition="varchar(100) default ''")
 	private String remarks;
-	
-	@Lob
-	//@Type(type = "org.hibernate.type.ImageType")
-	private byte[] imageData;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String filename;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String department;
-	
-	@Transient
-	private MultipartFile file;
-	
-	//@Column(columnDefinition="int default ''")
 	private int status;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String approver;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String approvalHistory;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
 	private String approvalDates;
-	
-	//@Column(columnDefinition="varchar(500) default ''")
-	private String approvalRemarks;
-	
-	//@Column(columnDefinition="varchar(50) default ''")
-	private String approversHistory;
-	
-	@Transient
 	public String statusDesc;
 	
-	public ReimbursementInfo() {};
-	
-	public ReimbursementInfo(long id, String empName, double priceWTax, String remarks, String store, double tax, String type, String filename, String department, 
-			String approvalDates, String approvalHistory,String approvalRemarks, String approversHistory, String approver, int status, String username) {
+	public ReimbursementInfoWoutImg(long id, String empName, double priceWTax, String remaks, String store, double tax, String type, String filename, String department, 
+			String approvalDates, String approvalHistory, String approver, int status, String username) {
 		this.id = id;
 		this.empName = empName;
 		this.priceWTax = priceWTax;
@@ -94,8 +49,6 @@ public class ReimbursementInfo {
 		this.department = department;
 		this.approvalDates = approvalDates;
 		this.approvalHistory = approvalHistory;
-		this.approvalRemarks = approvalRemarks;
-		this.approversHistory = approversHistory;
 		this.approver = approver;
 		this.status = status;
 		this.username = username;
@@ -155,12 +108,6 @@ public class ReimbursementInfo {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
-	public MultipartFile getFile() {
-		return file;
-	}
-	public void setFile(MultipartFile file) {
-		this.file = file;
-	}
 	public String getDepartment() {
 		return department;
 	}
@@ -192,32 +139,10 @@ public class ReimbursementInfo {
 	public void setApprovalDates(String approvalDates) {
 		this.approvalDates = approvalDates;
 	}
-	public byte[] getImageData() {
-		return imageData;
-	}
-	public void setImageData(byte[] imageData) {
-		this.imageData = imageData;
-	}
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
-	}
-
-	public String getApprovalRemarks() {
-		return approvalRemarks;
-	}
-
-	public void setApprovalRemarks(String approvalRemarks) {
-		this.approvalRemarks = approvalRemarks;
-	}
-
-	public String getApproversHistory() {
-		return approversHistory;
-	}
-
-	public void setApproversHistory(String approversHistory) {
-		this.approversHistory = approversHistory;
 	}
 }
