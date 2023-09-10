@@ -36,7 +36,7 @@ import com.apautomation.services.UserDetailsImpl;
 import jakarta.validation.Valid;
 
 //@CrossOrigin(origins = "*", maxAge = 3600)
-@CrossOrigin("https://apautomation-backend.azurewebsites.net")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/auth")
 public class AuthenticationController {
